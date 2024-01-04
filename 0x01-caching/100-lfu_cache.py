@@ -44,7 +44,7 @@ class LFUCache(BaseCaching):
                 del self.cache_data[discard]
                 del self.usage[self.usage.index(discard)]
                 del self.frequency[discard]
-            # update usage frequency
+
             if key in self.frequency:
                 self.frequency[key] += 1
             else:
